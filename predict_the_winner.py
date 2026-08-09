@@ -13,7 +13,7 @@ def predict_winner(nums):
             # Choose the option (take left or take right) that maximizes 
             # (my pick - opponent's best net score from what's left)
             dp[i][j] = max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1])
-
+            
     return dp[0][n - 1] >= 0
 
 
