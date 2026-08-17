@@ -16,3 +16,15 @@ def find_smallest(nums): # for find the smallest number
     return smallest
 
 print(find_smallest([3,7,2,9,4]))
+
+def find_largest_index(nums):
+    largest = nums[0]
+    idx = 0
+    for i, num in enumerate(nums):
+        if num > largest:
+            largest = num
+            idx = i
+
+    return idx
+
+print(find_largest_index([3,7,2,9,4]))
